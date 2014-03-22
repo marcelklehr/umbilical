@@ -20,17 +20,19 @@ function Umbilical(opts, interface) {
   return client
 }
 
-Umbilical.endpoint = function(opts, interface) {
+Umbilical.endpoint = function(opts, interface, fn) {
   if(!opts.port) throw new Error('No port specified')
   var port = opts.port
     , address = opts.address
   
-  var socket = net.createServer(function() {
+  var server = net.createServer(function(socket) {
     socket
       .pipe((server = rpc.createServer(interface)).createStream())
       .pipe(client = rpc.createClient(server.id))
       .pipe(socket)
-  }.listen(port, address)
+    
+    fn(client)
+  }).listen(port, address)
   
-  return client
+  return server
 }

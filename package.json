@@ -1,8 +1,11 @@
 {
   "name": "umbilical",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bidirectional rpc over tpc for inter-process communication pruposes and other stuff.",
   "main": "umbilical.js",
+  "dependencies": {
+    "p2p-rpc-stream": "*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
