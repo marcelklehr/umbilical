@@ -1,0 +1,26 @@
+{
+  "name": "umbilical",
+  "version": "0.0.0",
+  "description": "Bidirectional rpc over tpc for inter-process communication pruposes and other stuff.",
+  "main": "umbilical.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marcelklehr/umbilical.git"
+  },
+  "keywords": [
+    "bidirectional",
+    "bidirectional",
+    "rpc",
+    "tcp",
+    "rpc"
+  ],
+  "author": "Marcel Klehr <mklehr@gmx.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcelklehr/umbilical/issues"
+  },
+  "homepage": "https://github.com/marcelklehr/umbilical"
+}
