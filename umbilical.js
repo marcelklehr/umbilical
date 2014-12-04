@@ -1,4 +1,4 @@
-var smokesignal = require('net')
+var net = require('net')
   , rpc = require('p2p-rpc-stream')
 
 module.exports = Umbilical
