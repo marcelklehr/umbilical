@@ -1,6 +1,6 @@
 {
   "name": "umbilical",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Bidirectional rpc over tpc for inter-process communication pruposes and other stuff.",
   "main": "umbilical.js",
   "dependencies": {
