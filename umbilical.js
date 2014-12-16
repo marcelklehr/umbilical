@@ -17,6 +17,10 @@ function Umbilical(opts, interface) {
     .pipe(client = rpc.createClient(server.id))
     .pipe(socket)
   
+  socket.on('error', function(err) {
+    client.emit('error', err)
+  })
+
   return client
 }
 
@@ -31,6 +35,10 @@ Umbilical.endpoint = function(opts, interface, fn) {
       .pipe(client = rpc.createClient(server.id))
       .pipe(socket)
     
+    socket.on('error', function(err) {
+      client.emit('error', err)
+    })
+
     fn(client)
   }).listen(port, address)
   
